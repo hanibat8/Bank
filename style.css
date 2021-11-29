@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	line-height: 1.6;
+    background-color: rgb(243, 243, 243);
+}
+
+button{
+    border: none;
+}
+
+button:hover,a:hover{
+    cursor: pointer;
+}
+
+.nav{
+    font-size: 1.6rem;
+    margin: 3rem 0 0;
+    padding: 0 3rem;
+    padding-right: .2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo{
+   height: 5.25rem;
+}
+
+.login__input{
+    height: 3.8rem;
+    width: 35%;
+    border: 1px solid rgb(243, 243, 243);;
+    border-radius: 30px;
+    margin-right: 1.2rem;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.login__btn{
+    align-self: center;
+    background: none;
+}
+
+.main{
+    width: 65vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    transition: all .5s;
+}
+
+.balance{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bank{
+    display: block;
+
+}
+
+.main.hidden,
+.footer.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.bank__transactions{
+    background-color: rgb(255, 255, 255);
+height: 50rem;
+    overflow-y: scroll;
+}
+
+.bank__transaction--row{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.041);
+}
+
+.bank__transaction--row--action{
+    padding:.2rem .7rem;
+    border-radius: 3rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.bank__transaction--row--action--withdrawal{
+    background: linear-gradient(to right, rgb(209, 119, 119),rgb(216, 68, 68));
+}
+
+.bank__transaction--row--action--deposit{
+    background: linear-gradient(to right, rgb(119, 209, 134),rgb(68, 216, 93));
+}
+
+.bank__transaction--row--amount{
+    font-size: 1.6rem;
+}
+
+.bank__operation{
+    border-radius: 10px;
+    padding: 2.5rem 3rem;
+    margin-top: 2rem;
+}
+
+.bank__operation:not(:last-of-type){
+    margin-bottom: 3rem;
+}
+
+.bank__operation__heading{
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+}
+
+.bank__operation--transfer{
+    background: linear-gradient(to right, rgb(192, 175, 76),rgb(201, 192, 144));
+}
+
+.bank__operation--loan{
+    background: linear-gradient(to right, rgb(119, 209, 134),rgb(68, 216, 93));
+}
+
+.bank__operation--close{
+    background: linear-gradient(to right, rgb(209, 119, 119),rgb(216, 68, 68));
+}
+
+.bank__operation-form{
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 1fr;
+    grid-column-gap: .8rem;
+    grid-row-gap: 1rem;
+}
+
+.bank__operation-form--loan{
+    grid-template-columns: 14rem 6rem;
+}
+
+.bank__operation-form__input{
+   display: inline-block;
+   height: 2.5rem;
+   border-radius: 5px;
+   border: none;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.bank__operation-form__btn{
+   height: 2.2rem;
+   border-radius: 5px;
+   border: none;
+   background: #fff;
+}
+
+.bank__operation-form__label{
+    font-size: 1.3rem;
+    justify-self: center;
+}
+
+.footer{
+    width: 65vw;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 2rem;
+    transition: all .5s;
+}
+
+.bank__transaction__info,
+.bank__transaction__infos{
+    display: flex;
+}
+
+.bank__transaction__infos:not(:last-of-type){
+    margin-right: 3rem;
+}
+
+.bank__transaction__info__in,
+.bank__transaction__info__out{
+    margin-left: 1.5rem;
+}
+
+.bank__transaction__infos div,
+.bank__transaction__infos div,
+.bank__transaction__infos div{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+
+.bank__transaction__infos:first-of-type div{
+    background-image: linear-gradient(to right,rgb(119, 209, 134),rgb(68, 216, 93));
+}
+
+.bank__transaction__infos div{
+    background-image: linear-gradient(to right,rgb(209, 119, 119),rgb(216, 68, 68));
+}
+
+.bank__transaction__infos:last-of-type div{
+    background-image: linear-gradient(to right, rgb(192, 175, 76),rgb(201, 192, 144));
+}
+
+
+@media(max-width:900px){
+    html{
+        font-size:  50%;
+    }
+    .nav__detail{
+        width: 30%;
+    }
+}
+
+@media(max-width:750px){
+    .nav__detail{
+        display: none;
+    }
+
+    .main{
+        width: 80vw;
+    }
+}
+
+@media(max-width:500px){
+    .logo__container{
+        display: none;
+    }
+}
+
+@media(min-width:1050px){
+    html{
+        font-size:  75%;
+    }
+    .main{
+        width: 80vw;
+    }
+    .bank{
+        display: grid;
+        grid-template-columns: 1fr 40rem;
+        grid-column-gap: 3rem;
+    }
+}

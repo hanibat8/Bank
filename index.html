@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bank</title>
+</head>
+<body>
+    <nav class="nav">
+        <h2 class="nav__detail">
+            Log in to get started
+        </h2>
+        <div class="logo__container">
+            <img src="img/logo.png" alt="Logo" class="nav__logo">
+        </div>
+        <form action="" class="form__login">
+            <input class="login__input login__user" 
+                   type="text"
+                   placeholder="user"
+            >
+            <input class="login__input login__pin" 
+                   type="text"
+                   placeholder="PIN"
+            >
+            <button class="login__btn">&rarr;</button>
+        </form>
+    </nav>
+
+    <main class="main hidden">
+        <div class="balance">
+            <h2 class="balance__label">Current balance</h2>
+            <h1 class="balance__value">$500</h1>
+        </div>
+
+        <div class="bank">
+            <div class="bank__transactions">
+                <div class="bank__transaction--row">
+                </div>
+                
+            </div>
+            <div class="bank__operations">
+                <div class="bank__operation bank__operation--transfer">
+                    <h2 class="bank__operation__heading">
+                        Transfer money</h2>
+                        <form action="" class="bank__operation-form">
+                            <input type="text" class="bank__operation-form__input bank__operation-form__input-transfer--recipient">
+                            <input type="text" class="bank__operation-form__input bank__operation-form__input-transfer--amount">
+                            <button class="bank__operation-form__btn bank__operation-form__btn-transfer">&rarr;</button>
+                            <label class="bank__operation-form__label">Transfer to</label>
+                            <label class="bank__operation-form__label">Amount</label>
+                        </form>
+                    </h2>
+                </div>
+                <div class="bank__operation bank__operation--loan">
+                    <h2 class="bank__operation__heading">
+                        Request loan</h2>
+                        <form action="" class="bank__operation-form bank__operation-form--loan">
+                            <input type="text" class="bank__operation-form__input bank__operation-form__input-loan--amount">
+                            <button class="bank__operation-form__btn bank__operation-form__btn-loan">&rarr;</button>
+                            <label class="bank__operation-form__label">Amount</label>
+                        </form>
+                    </h2>
+                </div>
+                <div class="bank__operation bank__operation--close">
+                    <h2 class="bank__operation__heading">
+                        Close account</h2>
+                        <form action="" class="bank__operation-form">
+                            <input type="text" class="bank__operation-form__input bank__operation-form-close--user">
+                            <input type="text" class="bank__operation-form__input bank__operation-form-close--pin">
+                            <button class="bank__operation-form__btn bank__operation-form__btn-close">&rarr;</button>
+                            <label class="bank__operation-form__label">Confirm user</label>
+                            <label class="bank__operation-form__label">Confirm PIN</label>
+                        </form>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer hidden">
+        <div class="bank__transaction__info">
+            <div class="bank__transaction__infos">
+                <div>IN</div>
+                <div class="bank__transaction__info__in"></div>
+            </div>
+            <div class="bank__transaction__infos">
+                <div>OUT</div>
+                <div class="bank__transaction__info__out"></div>
+            </div>
+           <!--<div class="bank__transaction__infos">
+                <div>INTEREST</div>
+                <div class="bank__transaction__info__int"></div> 
+            </div>!-->
+        </div>
+    </footer>
+</body>
+<script src="app.js"></script>
+</html>
